@@ -1,0 +1,213 @@
+﻿/* 泰迪杯智能客服系统 - 样式表 */
+/* 基础样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body { 
+    font-family: 'Microsoft YaHei', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f7fa;
+    min-height: 100vh;
+  }
+  
+  /* 主容器布局 */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* 头部导航栏 */
+  .header {
+    background-color: #1a73e8;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  /* 聊天区域 */
+  .chat-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    margin-top: 20px;
+  }
+  
+  .chat-header {
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .chat-header .status {
+    display: flex;
+    align-items: center;
+  }
+  
+  .chat-header .status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #4caf50;
+    margin-right: 5px;
+  }
+  
+  .chat-header h2 {
+    font-size: 1.2rem;
+    margin-left: 10px;
+  }
+  
+  /* 消息列表 */
+  .messages-list {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #f8f9fa;
+    max-height: 500px;
+  }
+  
+  /* 消息气泡 */
+  .message {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+  }
+  
+  .user-message {
+    align-self: flex-end;
+  }
+  
+  .系统-message,
+  .泰迪客服-message {
+    align-self: flex-start;
+  }
+  
+  .message .sender {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .message .content {
+    padding: 12px 15px;
+    border-radius: 18px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  }
+  
+  .user-message .content {
+    background-color: #1a73e8;
+    color: white;
+    border-bottom-right-radius: 5px;
+  }
+  
+  .泰迪客服-message .content {
+    background-color: #f1f3f4;
+    color: #333;
+    border-bottom-left-radius: 5px;
+  }
+  
+  .系统-message .content {
+    background-color: #e8f0fe;
+    color: #174ea6;
+    font-style: italic;
+  }
+  
+  /* 输入区域 */
+  .input-area {
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #e0e0e0;
+  }
+  
+  .input-area form {
+    display: flex;
+    align-items: center;
+  }
+  
+  .message-input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 24px;
+    font-size: 1rem;
+    outline: none;
+  }
+  
+  .message-input:focus {
+    border-color: #1a73e8;
+    box-shadow: 0 0 0 2px rgba(26,115,232,0.2);
+  }
+  
+  .send-button {
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    margin-left: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .send-button:hover {
+    background-color: #0d62d0;
+  }
+  
+  /* 无法回答提示 */
+  .unable-to-answer {
+    background-color: #fff3e0;
+    color: #e65100;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border-left: 4px solid #e65100;
+  }
+  
+  /* 响应式设计 */
+  @media screen and (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+    
+    .message {
+      max-width: 90%;
+    }
+    
+    .header h1 {
+      font-size: 1.2rem;
+    }
+  }
+  
+  /* 主题切换按钮 */
+  .theme-toggle {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2rem;
+  }

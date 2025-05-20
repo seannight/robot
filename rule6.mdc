@@ -1,0 +1,6 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+一般情况下使用'UTF-8'编码保存，不要出现中文乱码问题，因为我要确保终端日志可以查看

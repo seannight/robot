@@ -1,0 +1,6 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+用gemini2.5时减少分析内容，目的是有效编辑代码内容，除非是解决文学性作品时可以展开分析，在本项目修改中尽量精简话语
